@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Shernell Jackson</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Stoke&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alike&family=Stoke&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Quicksand:wght@500&display=swap');
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 100%;
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+    font-size: 100%;
+  }
+}
+
+body {
+   background: url("https://images.pexels.com/photos/2414442/pexels-photo-2414442.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+}
+
+#name,
+#email,
+#number,
+.button,
+.box,
+.input {
+  display: block;
+  font-size: 1rem;
+  border-radius: 3px;
+  width: 100%
+}
+
+header {
+  margin-top: 50px;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+h1, p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+form {
+  color: black;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  background-color: #ccc2bb;
+  border-radius: 20px;
+  width: 50%;
+  padding: 20px 40px 25px 30px;
+  margin: auto;
+  }
+
+
+
+#dropdown {
+  display: block;
+  position: relative;
+  border-radius: 3px;
+  font-size: 1rem;
+  width: 100% 
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+}
+
+textarea {
+  resize: none;
+  margin: auto auto;
+  font-family: 'Inter', sans-serif;
+}
+
+#submit {
+  display: block;
+  background-color: orange;
+  color: #551527;
+  font-size: 1em;
+  border-radius: 3px;
+  margin: auto auto;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+</style>
+<div class="container">
+    <header>
+      <h1 id="title"> Performance Survey</h1>
+      <p>Give us your feedback</p>
+    </header>
+    
+    <br>
+    <form id="survey-form">
+      <div class="form-box">
+        <label id="name-label" for="name">Name</label>
+          <input 
+                 id="name"
+                 name="name"
+                 type="text"
+                 />
+      </div><br>
+      <div class="form-box">
+        <label id="email-label" for="email">E-mail</label>
+          <input 
+                 id="email"
+                 name="email"
+                 type="email"
+               />
+      </div><br>
+      <div class="form-box">
+        <label id="number-label" for="number">Age</label>
+          <input
+                 id="number"
+                 name="age"
+                 type="number"
+  
+                />
+      </div><br>
+      
+      <div class="form-box">
+        <label id="help" for="dropdown">What did we help you with?</label>
+        <select id="dropdown" name="help" required>
+          <option value="general">General Suppoort</option>
+          <option value="program">Program Support</option>
+          <option value="web">Web Support</option>
+          <option value="network">Network Support </option>
+          
+          <option value="system">System Support</option>
+        <option value="other">Other</option>
+        </select>
+      </div><br>
+      
+      <div class="form-box">
+        <p>Do you use technical support?</p>
+        <label for="yes" class="button">
+          <input id="yes"
+                 type="radio"
+                 name="yes-no"
+                 value="yes"
+                 checked
+                 />Yes</label>
+        <label for="no" class="button">
+          <input id="no"
+                 type="radio"
+                 name="yes-no"
+                 value="no"
+                 />No</label>
+      </div><br>
+      
+      <div class="form-box">
+        <label id="often" for="dropdown">How often do you need technical support?</label>
+          <select id="dropdown" name="often" required>
+            <option disabled selected value>Select an option</option>
+            <option value="very-often">Very often</option>
+            <option value="often">Often</option>
+            <option value="sometimes">Sometimes</option>
+            <option value="rarely">Rarely</option>
+            <option value="never">Never</option>
+          </select>
+      </div><br>
+      
+      <div class="form-box">
+        <p>Which services do you utilize?
+          <span class="clue"></span>
+        </p>
+        <label for="Chat"
+    text-shadow: -1px 1px 2px #ccc2bb,
+            1px 1px 2px #ccc2bb,
+            1px -1px 0 #ccc2bb,
+            -1px -1px 0 #ccc2bb;
+                    class="box">
+          <input id="chat"
+                 type="checkbox"
+                 name="product"
+                 value="remover"
+                 />ChatBot</label>
+        <label for="Phone" class="box">
+          <input id="phone"
+                 type="checkbox"
+                 name="product"
+                 value="Phone"
+                 />Telephone Support</label>
+        <label for="instore" class="box">
+          <input id="instore"
+                 type="checkbox"
+                 name="product"
+                 value="instore"
+                 />In Store</label>
+        <label for="web" class="box">
+          <input id="web"
+                 type="checkbox"
+                 name="product"
+                 value="web"
+                 />Web Instructions</label>
+        <label for="other" class="box">
+          <input id="other"
+                 type="checkbox"
+                 name="product"
+                 value="other"
+                 />Other</label>
+      </div><br>
+      
+      <div class="form-box">
+        <label for="comments">Questions comments or concerns?</label>
+        <textarea id="comments" 
+                  name="comments"
+                  class="input"
+                  rows="5" 
+                  cols="50"></textarea>       </div><br>
+      
+      <div class="form-box">
+        <button id="submit"
+                type="submit"
+                />Submit</button>
+      </div>
+    </form>            
+  </div>
+  
